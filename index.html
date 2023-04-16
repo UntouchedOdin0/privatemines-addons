@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>List of files in privatemines-addons/addons</title>
@@ -20,6 +19,13 @@
 					link.href = file.html_url;
 					link.textContent = file.name;
 					listItem.appendChild(link);
+					
+					// Create a download link for each file
+					const downloadLink = document.createElement("a");
+					downloadLink.href = file.download_url;
+					downloadLink.textContent = " (download)";
+					listItem.appendChild(downloadLink);
+					
 					document.getElementById("file-list").appendChild(listItem);
 				});
 			})
@@ -27,4 +33,5 @@
 	</script>
 </body>
 </html>
+
 
