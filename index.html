@@ -2,6 +2,53 @@
 <html>
 <head>
 	<title>List of files in privatemines-addons/addons</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		li {
+			margin: 10px;
+			padding: 10px;
+			background-color: #ffffff;
+			border: 1px solid #cccccc;
+			box-shadow: 0px 0px 5px 0px #cccccc;
+			flex: 0 0 calc(33.33% - 20px);
+			max-width: calc(33.33% - 20px);
+			text-align: center;
+			overflow-wrap: break-word;
+		}
+		li:hover {
+			box-shadow: 0px 0px 10px 0px #cccccc;
+		}
+		a {
+			color: #0077ff;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		.download {
+			color: #555555;
+			font-size: 0.8em;
+		}
+	</style>
 </head>
 <body>
 	<h1>List of files in privatemines-addons/addons</h1>
@@ -22,6 +69,7 @@
 					
 					// Create a download link for each file
 					const downloadLink = document.createElement("a");
+					downloadLink.className = "download";
 					downloadLink.href = file.download_url;
 					downloadLink.textContent = " (download)";
 					listItem.appendChild(downloadLink);
@@ -33,5 +81,3 @@
 	</script>
 </body>
 </html>
-
-
